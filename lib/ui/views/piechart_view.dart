@@ -26,11 +26,11 @@ class PieChartView extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         ChipsChoice<int>.single(
-                          itemConfig: ChipsChoiceItemConfig(
-                              elevation: 1, selectedColor: Colors.red),
+                          choiceActiveStyle: const C2ChoiceStyle(
+                              elevation: 1, color: Colors.red),
                           value: model.selectedMonthIndex,
-                          isWrapped: true,
-                          options: ChipsChoiceOption.listFrom<int, String>(
+                          wrapped: true,
+                          choiceItems: C2Choice.listFrom<int, String>(
                             source: model.months,
                             value: (i, v) => i,
                             label: (i, v) => v,
@@ -38,11 +38,12 @@ class PieChartView extends StatelessWidget {
                           onChanged: (val) => model.changeSelectedMonth(val),
                         ),
                         ChipsChoice<int>.single(
-                          itemConfig: ChipsChoiceItemConfig(
-                              elevation: 1, selectedColor: Colors.green),
+                          choiceActiveStyle: const C2ChoiceStyle(
+                              elevation: 1,
+                              color: Colors.green),
                           value: model.type == 'income' ? 0 : 1,
-                          isWrapped: true,
-                          options: ChipsChoiceOption.listFrom<int, String>(
+                          wrapped: true,
+                          choiceItems: C2Choice.listFrom<int, String>(
                             source: model.types,
                             value: (i, v) => i,
                             label: (i, v) => v,

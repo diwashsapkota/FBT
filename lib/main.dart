@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Router;
 import 'package:moneymanager/locator.dart';
 import 'package:moneymanager/ui/router.dart';
 import 'package:moneymanager/ui/shared/app_colors.dart';
