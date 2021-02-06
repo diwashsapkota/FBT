@@ -14,7 +14,7 @@ class DetailsModel extends BaseModel {
       locator<MoorDatabaseService>();
 
   Icon getIconForCategory(int index, String type) {
-    if (type == 'income') {
+    if (type == 'Income') {
       final categoryIcon = _categoryIconService.incomeList.elementAt(index);
 
       return Icon(
@@ -32,14 +32,14 @@ class DetailsModel extends BaseModel {
   }
 
   String getCategoryIconName(index, type) {
-    if (type == 'income') {
+    if (type == 'Income') {
       return _categoryIconService.incomeList.elementAt(index).name;
     } else {
       return _categoryIconService.expenseList.elementAt(index).name;
     }
   }
 
-  Future deleteTransacation(Transaction transaction) async {
+  Future deleteTransaction(Transaction transaction) async {
     return await _moorDatabaseService.deleteTransaction(transaction);
   }
 }

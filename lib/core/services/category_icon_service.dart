@@ -7,7 +7,7 @@ class CategoryIconService {
   final expenseList = {
     Category(0, "Food", FontAwesomeIcons.pizzaSlice, Colors.green),
     Category(1, "Bills", FontAwesomeIcons.moneyBill, Colors.blue),
-    Category(2, "Transportaion", FontAwesomeIcons.bus, Colors.blueAccent),
+    Category(2, "Transportation", FontAwesomeIcons.bus, Colors.blueAccent),
     Category(3, "Home", FontAwesomeIcons.home, Colors.brown),
     Category(4, "Entertainment", FontAwesomeIcons.gamepad, Colors.cyanAccent),
     Category(5, "Shopping", FontAwesomeIcons.shoppingBag, Colors.deepOrange),

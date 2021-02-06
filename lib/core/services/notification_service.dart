@@ -31,10 +31,10 @@ class NotificationService {
     var time = new Time(hour, minute, 0);
     // remove previous if found
     removeReminder(id);
-    // start the schdeuling
+    // start the scheduling
     await flutterLocalNotificationsPlugin.showDailyAtTime(
         id, title, body, time, getPlatformChannelSpecfics());
-    print('Notification Succesfully Scheduled at $hour:$minute ');
+    print('Notification Successfully Scheduled at $hour:$minute ');
   }
 
   getPlatformChannelSpecfics() {
@@ -42,7 +42,7 @@ class NotificationService {
         'your channel id', 'your channel name', 'your channel description',
         importance: Importance.max,
         priority: Priority.high,
-        ticker: 'Medicine Reminder');
+        ticker: 'Milking Time Reminder');
     var iOSPlatformChannelSpecifics = IOSNotificationDetails();
     var platformChannelSpecifics = NotificationDetails(android: androidPlatformChannelSpecifics, iOS: iOSPlatformChannelSpecifics);
 

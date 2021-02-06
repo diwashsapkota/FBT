@@ -16,7 +16,7 @@ class SpashView extends StatelessWidget {
         seconds: 2,
         navigateAfterSeconds: HomeView(),
         title: new Text(
-          'Money Manager',
+          'Farm Budget Tracker',
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
         ),
         image: new Image.asset(
@@ -26,7 +26,7 @@ class SpashView extends StatelessWidget {
         ),
         backgroundColor: backgroundColor,
         loadingText: Text(
-          'A place for all of your expenses.',
+          'सबै खर्चको विवरण',
           style: TextStyle(fontStyle: FontStyle.italic),
         ),
         photoSize: 100.0,

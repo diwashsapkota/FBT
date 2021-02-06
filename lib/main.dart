@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Money Manager',
+      title: 'Farm Budget Tracker',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: backgroundColor,
-        accentColor: Colors.blue,
+        accentColor: Colors.blueAccent,
       ),
       initialRoute: '/',
       onGenerateRoute: Router.generateRoute,

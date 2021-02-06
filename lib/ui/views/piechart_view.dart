@@ -41,7 +41,7 @@ class PieChartView extends StatelessWidget {
                           choiceActiveStyle: const C2ChoiceStyle(
                               elevation: 1,
                               color: Colors.green),
-                          value: model.type == 'income' ? 0 : 1,
+                          value: model.type == 'Income' ? 0 : 1,
                           wrapped: true,
                           choiceItems: C2Choice.listFrom<int, String>(
                             source: model.types,

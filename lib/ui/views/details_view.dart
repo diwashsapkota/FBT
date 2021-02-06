@@ -53,7 +53,7 @@ class DetailsView extends StatelessWidget {
                       right: 18,
                       top: 235,
                       child: FloatingActionButton(
-                        child: Icon(Icons.edit, color: Colors.black38),
+                        child: Icon(Icons.edit, color: Colors.white),
                         backgroundColor: backgroundColor,
                         onPressed: () {
                           Navigator.of(context)
@@ -81,7 +81,7 @@ class DetailsView extends StatelessWidget {
                   "Delete",
                 ),
                 onPressed: () async {
-                  await model.deleteTransacation(transaction);
+                  await model.deleteTransaction(transaction);
                   // hide dialog
                   Navigator.of(context).pop();
                   // exit detailsscreen

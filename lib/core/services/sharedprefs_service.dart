@@ -11,7 +11,7 @@ class SharedPrefrencesService {
     final int hour = prefs.getInt(hourKey) ?? 0;
     final int minute = prefs.getInt(minuteKey) ?? 0;
 
-    if (hour == 0 || minute == 0) return 'Time not specfied';
+    if (hour == 0 || minute == 0) return 'Time not specified';
     // make the hour two digit because its 24 HR view
     String hourTwoDigits = hour.toString().padLeft(2, '0');
 

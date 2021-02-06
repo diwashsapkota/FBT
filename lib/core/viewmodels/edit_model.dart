@@ -71,10 +71,10 @@ class EditModel extends BaseModel {
   }
 
   void init(Transaction transaction) {
-    // initla values are current day and month
+    // initial values are current day and month
     selectedMonth = transaction.month;
     selectedDay = transaction.day;
-    if (transaction.type == 'income') {
+    if (transaction.type == 'Income') {
       category =
           _categoryIconService.incomeList.elementAt(transaction.categoryindex);
     } else {
@@ -107,7 +107,7 @@ class EditModel extends BaseModel {
     // insert it!
     await _moorDatabaseService.updateTransaction(updatedTransaction);
 
-    Toast.show("Edited successfully!", context,
+    Toast.show("Edited Successfully!", context,
         duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
     // return to the home
 
