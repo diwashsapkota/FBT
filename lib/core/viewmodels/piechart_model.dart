@@ -33,7 +33,7 @@ class PieChartModel extends BaseModel {
 
   Map<String, double> dataMap = new Map<String, double>();
 
-  String type = 'expense';
+  String type = 'Expense';
 
   List<String> types = ["Income", "Expense"];
 
@@ -75,34 +75,34 @@ class PieChartModel extends BaseModel {
 
   Map<String, double> getDefaultDataMap(List<Transaction> transactions) {
     Map<String, double> fullExpensesMap = {
-      'Food': 0,
-      'Bills': 0,
-      'Transportaion': 0,
-      'Home': 0,
-      'Entertainment': 0,
-      'Shopping': 0,
-      'Clothing': 0,
+      'Feed': 0,
+      'Livestock': 0,
+      'Operation': 0,
+      'Wages': 0,
+      'Fuel': 0,
+      'Machinery': 0,
+      'Pet': 0,
       'Insurance': 0,
       'Telephone': 0,
-      'Health': 0,
-      'Sport': 0,
-      'Beauty': 0,
-      'Education': 0,
-      'Gift': 0,
-      'Pet': 0,
-      'Salary': 0,
+      'Advertisement': 0,
+      'Labor': 0,
+      'Tax': 0,
+      'Land_revenue': 0,
+      'Bonus': 0,
+      'Miscellaneous': 0,
+      'Milk_Sales': 0,
       'Awards': 0,
       'Grants': 0,
-      'Rental': 0,
+      'Livestock_Sales': 0,
       'Investment': 0,
-      'Lottery': 0,
+      'Other': 0,
     };
 
     Map<String, double> fullIncomeMap = {
-      'Salary': 0,
+      'Milk_Sales': 0,
       'Awards': 0,
       'Grants': 0,
-      'Rental': 0,
+      'Livestock_Sales': 0,
       'Investment': 0,
       'Lottery': 0,
     };
@@ -110,7 +110,7 @@ class PieChartModel extends BaseModel {
     List<String> transactionsCategories = List();
 
     transactions.forEach((element) {
-      if (type == 'income') {
+      if (type == 'Income') {
         String category = _categoryIconService.incomeList
             .elementAt(element.categoryindex)
             .name;
@@ -123,7 +123,7 @@ class PieChartModel extends BaseModel {
       }
     });
 
-    if (type == 'income') {
+    if (type == 'Income') {
       fullIncomeMap.removeWhere((key, value) {
         return !transactionsCategories.contains(key);
       });
@@ -141,16 +141,16 @@ class PieChartModel extends BaseModel {
     // 0 => income
     // 1 => expense
     if (val == 0) {
-      type = 'income';
+      type = 'Income';
     } else {
-      type = 'expense';
+      type = 'Expense';
     }
 
     await init(false);
   }
 
   void prepareDataMap(element) {
-    if (type == 'income') {
+    if (type == 'Income') {
       dataMap[_categoryIconService.incomeList
           .elementAt(element.categoryindex)
           .name] = dataMap[_categoryIconService.incomeList

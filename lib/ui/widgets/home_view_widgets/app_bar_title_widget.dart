@@ -23,12 +23,12 @@ class AppBarTitle extends StatelessWidget {
               title,
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
             ),
-            model.isCollabsed
+            model.isCollapsed
                 ? Icon(
-                    Icons.arrow_drop_down,
+                    Icons.arrow_drop_up,
                   )
                 : Icon(
-                    Icons.arrow_drop_up,
+                    Icons.arrow_drop_down,
                   ),
           ],
         ),

@@ -19,7 +19,7 @@ void setupLocator() {
   locator.registerLazySingleton(() => CategoryIconService());
   locator.registerLazySingleton(() => MoorDatabaseService());
   locator.registerLazySingleton(() => NotificationService());
-  locator.registerLazySingleton(() => SharedPrefrencesService());
+  locator.registerLazySingleton(() => SharedPreferencesService());
   //!VIEWMODELS
   locator.registerFactory(() => HomeModel());
   locator.registerFactory(() => DetailsModel());

@@ -31,16 +31,16 @@ class HomeView extends StatelessWidget {
                   Column(
                     children: <Widget>[
                       SummaryWidget(
-                        income: model.incomeSum,
-                        expense: model.expenseSum,
+                        Income: model.incomeSum,
+                        Expense: model.expenseSum,
                       ),
                       buildList(model.transactions, model),
                     ],
                   ),
-                  model.isCollabsed
+                  model.isCollapsed
                       ? PickMonthOverlay(
                           model: model,
-                          showOrHide: model.isCollabsed,
+                          showOrHide: model.isCollapsed,
                           context: context)
                       : Container(),
                 ],

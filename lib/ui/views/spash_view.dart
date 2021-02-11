@@ -20,7 +20,7 @@ class SpashView extends StatelessWidget {
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
         ),
         image: new Image.asset(
-          'assets/icons/wallet.png',
+          'assets/icons/cow.png',
           height: 100,
           width: 100,
         ),

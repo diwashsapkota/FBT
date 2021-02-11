@@ -32,7 +32,7 @@ class InsertTransactionModel extends BaseModel {
   String selectedMonth;
   DateTime selectedDate = new DateTime.now();
   String type;
-  int cateogryIndex;
+  int categoryIndex;
 
   Future selectDate(context) async {
     // hide the keyboard
@@ -54,11 +54,11 @@ class InsertTransactionModel extends BaseModel {
   }
 
   void init(int selectedCategory, int index) {
-    // initla values are current day and month
+    // initial values are current day and month
     selectedMonth = months[DateTime.now().month - 1];
     selectedDay = DateTime.now().day.toString();
-    type = (selectedCategory == 1) ? 'income' : 'expense';
-    cateogryIndex = index;
+    type = (selectedCategory == 1) ? 'Income' : 'Expense';
+    categoryIndex = index;
   }
 
   void unFocusFromTheTextField(context) {
@@ -90,7 +90,7 @@ class InsertTransactionModel extends BaseModel {
         month: selectedMonth,
         memo: memoController.text,
         amount: int.parse(amount),
-        categoryindex: cateogryIndex);
+        categoryindex: categoryIndex);
     // insert it!
     await _moorDatabaseService.insertTransaction(newTransaction);
 

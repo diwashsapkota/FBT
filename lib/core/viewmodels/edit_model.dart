@@ -45,7 +45,7 @@ class EditModel extends BaseModel {
     DateTime picked = await showDatePicker(
         context: context,
         initialDate: selectedDate,
-        firstDate: DateTime(2020),
+        firstDate: DateTime(2021),
         lastDate: DateTime.now());
 
     if (picked != null) {

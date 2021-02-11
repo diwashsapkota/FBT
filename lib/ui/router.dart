@@ -29,7 +29,7 @@ class Router {
         var args = settings.arguments as List<dynamic>;
         return MaterialPageRoute(
             builder: (_) =>
-                InsertTranscationView(args.elementAt(0), args.elementAt(1)));
+                InsertTransactionView(args.elementAt(0), args.elementAt(1)));
       case 'details':
         var transaction = settings.arguments as Transaction;
         return MaterialPageRoute(builder: (_) => DetailsView(transaction));

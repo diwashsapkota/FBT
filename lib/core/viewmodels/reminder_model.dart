@@ -6,24 +6,24 @@ import 'package:moneymanager/core/viewmodels/base_model.dart';
 
 import '../../locator.dart';
 
-// rreminder model
+// reminder model
 class ReminderModel extends BaseModel {
   final NotificationService _notificationService =
       locator<NotificationService>();
 
-  final SharedPrefrencesService _sharedPrefrencesService =
-      locator<SharedPrefrencesService>();
+  final SharedPreferencesService _sharedPreferencesService =
+      locator<SharedPreferencesService>();
 
   TimeOfDay selectedTime;
 
   String timeText = '';
 
-  void scheduleNotifaction() {
+  void scheduleNotification() {
     if (selectedTime == null) return;
     _notificationService.showNotificationDaily(
         1,
-        'Money manager',
-        'Don\'t forget to record your expenses!',
+        'Farm Budget Tracker',
+        'Don\'t forget to record your income and expenses!',
         selectedTime.hour,
         selectedTime.minute);
   }
@@ -36,9 +36,9 @@ class ReminderModel extends BaseModel {
 
     if (time != null) {
       selectedTime = time;
-      scheduleNotifaction();
+      scheduleNotification();
 
-      storeTime(); // in shaerd prefs
+      storeTime(); // in shared prefs
       timeText = await getTime();
 
       notifyListeners();
@@ -46,11 +46,11 @@ class ReminderModel extends BaseModel {
   }
 
   getTime() async {
-    return await _sharedPrefrencesService.getTime();
+    return await _sharedPreferencesService.getTime();
   }
 
   storeTime() async {
-    await _sharedPrefrencesService.storeTime(
+    await _sharedPreferencesService.storeTime(
         selectedTime.hour, selectedTime.minute);
   }
 

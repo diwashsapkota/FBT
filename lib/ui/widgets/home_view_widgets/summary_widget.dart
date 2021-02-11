@@ -3,10 +3,10 @@ import 'package:moneymanager/ui/shared/text_styles.dart';
 import 'package:moneymanager/ui/shared/ui_helpers.dart';
 
 class SummaryWidget extends StatelessWidget {
-  final int income;
-  final int expense;
+  final int Income;
+  final int Expense;
 
-  const SummaryWidget({this.income, this.expense});
+  const SummaryWidget({this.Income, this.Expense});
 
   @override
   Widget build(BuildContext context) {
@@ -23,31 +23,31 @@ class SummaryWidget extends StatelessWidget {
                 children: <Widget>[
                   Text('Income', style: summaryTextStyle),
                   UIHelper.verticalSpaceSmall(),
-                  Text(income.toString(), style: summaryNumberTextStyle)
+                  Text(Income.toString(), style: summaryNumberTextStyle)
                 ],
               ),
               Text(
                 '|',
                 style: TextStyle(
                     fontSize: 40,
-                    color: Colors.blueGrey,
+                    color: Colors.blue,
                     fontWeight: FontWeight.w200),
               ),
               Column(
                 children: <Widget>[
                   Text(
-                    'Expense',
+                    'Expenses',
                     style: summaryTextStyle,
                   ),
                   UIHelper.verticalSpaceSmall(),
-                  Text(expense.toString(), style: summaryNumberTextStyle)
+                  Text(Expense.toString(), style: summaryNumberTextStyle)
                 ],
               ),
               Text(
                 '|',
                 style: TextStyle(
                     fontSize: 40,
-                    color: Colors.blueGrey,
+                    color: Colors.blue,
                     fontWeight: FontWeight.w200),
               ),
               Column(
@@ -57,7 +57,7 @@ class SummaryWidget extends StatelessWidget {
                     style: summaryTextStyle,
                   ),
                   UIHelper.verticalSpaceSmall(),
-                  Text((income - expense).toString(),
+                  Text((Income - Expense).toString(),
                       style: summaryNumberTextStyle)
                 ],
               ),

@@ -35,7 +35,7 @@ class HomeModel extends BaseModel {
   ];
 
   List<Transaction> transactions = List<Transaction>();
-  bool isCollabsed = false;
+  bool isCollapsed = false;
   String appBarTitle; // selected month
   String selectedYear;
   int selectedMonthIndex; // from month list above
@@ -53,7 +53,7 @@ class HomeModel extends BaseModel {
   }
 
   titleClicked() {
-    isCollabsed = !isCollabsed;
+    isCollapsed = !isCollapsed;
     notifyListeners();
   }
 
@@ -68,7 +68,7 @@ class HomeModel extends BaseModel {
   }
 
   void closeMonthPicker() {
-    isCollabsed = false;
+    isCollapsed = false;
     notifyListeners();
   }
 
@@ -97,27 +97,27 @@ class HomeModel extends BaseModel {
     scrollController.addListener(() {
       if (scrollController.position.userScrollDirection ==
           ScrollDirection.reverse) {
-        hideFloationButton();
+        hideFloatationButton();
       }
       if (scrollController.position.userScrollDirection ==
           ScrollDirection.forward) {
-        showFloationButton();
+        showFloatationButton();
       }
     });
   }
 
-  void showFloationButton() {
+  void showFloatationButton() {
     show = true;
     notifyListeners();
   }
 
-  void hideFloationButton() {
+  void hideFloatationButton() {
     show = false;
     notifyListeners();
   }
 
   Icon getIconForCategory(int index, String type) {
-    if (type == 'income') {
+    if (type == 'Income') {
       final categoryIcon = _categoryIconService.incomeList.elementAt(index);
 
       return Icon(

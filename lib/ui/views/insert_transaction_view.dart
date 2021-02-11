@@ -5,10 +5,10 @@ import 'package:moneymanager/ui/shared/app_colors.dart';
 import 'package:moneymanager/ui/shared/ui_helpers.dart';
 import 'package:moneymanager/ui/views/base_view.dart';
 
-class InsertTranscationView extends StatelessWidget {
+class InsertTransactionView extends StatelessWidget {
   final Category category;
   final int selectedCategory;
-  InsertTranscationView(this.category, this.selectedCategory);
+  InsertTransactionView(this.category, this.selectedCategory);
   @override
   Widget build(BuildContext context) {
     return BaseView<InsertTransactionModel>(
@@ -32,12 +32,12 @@ class InsertTranscationView extends StatelessWidget {
                 ),
                 UIHelper.verticalSpaceMedium(),
                 buildTextField(model.memoController, 'Memo:',
-                    "Enter a memo for your transcation", Icons.edit, false),
+                    "Enter a memo of transaction", Icons.edit, false),
                 UIHelper.verticalSpaceMedium(),
                 buildTextField(
                     model.amountController,
-                    'Amount:',
-                    "Enter a the amount for the transcation",
+                    'Amount  (Rs.):',
+                    "Enter the amount of transaction",
                     Icons.attach_money,
                     true),
                 UIHelper.verticalSpaceMedium(),
@@ -70,7 +70,7 @@ class InsertTranscationView extends StatelessWidget {
                       style: TextStyle(fontSize: 16),
                     ),
                     color: backgroundColor,
-                    textColor: Colors.black,
+                    textColor: Colors.white,
                     onPressed: () async {
                       await model.addTransaction(context);
                     },

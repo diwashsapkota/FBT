@@ -31,7 +31,7 @@ class EditView extends StatelessWidget {
               ),
               UIHelper.verticalSpaceMedium(),
               buildTextField(model.memoController, 'Memo:',
-                  "Enter a memo for your transaction", Icons.edit, false),
+                  "Enter a memo of your transaction", Icons.edit, false),
               UIHelper.verticalSpaceMedium(),
               buildTextField(
                   model.amountController,
@@ -72,7 +72,7 @@ class EditView extends StatelessWidget {
                     style: TextStyle(fontSize: 16),
                   ),
                   color: backgroundColor,
-                  textColor: Colors.black,
+                  textColor: Colors.white,
                   onPressed: () async {
                     await model.editTransaction(context, transaction.type,
                         transaction.categoryindex, transaction.id);

@@ -66,7 +66,7 @@ class _TransactionsListViewState extends State<TransactionsListView> {
                             transaction.categoryindex, transaction.type),
                       ),
                       title: Text(transaction.memo),
-                      trailing: transaction.type == 'expense'
+                      trailing: transaction.type == 'Expense'
                           ? Text('- ' + transaction.amount.toString(),
                               style: TextStyle(fontSize: 20))
                           : Text(transaction.amount.toString(),

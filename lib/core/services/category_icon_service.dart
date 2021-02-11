@@ -5,29 +5,30 @@ import 'package:moneymanager/core/models/category.dart';
 class CategoryIconService {
   //* FIRST : EXPENSE LIST
   final expenseList = {
-    Category(0, "Food", FontAwesomeIcons.pizzaSlice, Colors.green),
-    Category(1, "Bills", FontAwesomeIcons.moneyBill, Colors.blue),
-    Category(2, "Transportation", FontAwesomeIcons.bus, Colors.blueAccent),
-    Category(3, "Home", FontAwesomeIcons.home, Colors.brown),
-    Category(4, "Entertainment", FontAwesomeIcons.gamepad, Colors.cyanAccent),
-    Category(5, "Shopping", FontAwesomeIcons.shoppingBag, Colors.deepOrange),
-    Category(6, "Clothing", FontAwesomeIcons.tshirt, Colors.deepOrangeAccent),
+    Category(0, "Feed", FontAwesomeIcons.pizzaSlice, Colors.green),
+    Category(1, "Livestock", FontAwesomeIcons.truck, Colors.blue),
+    Category(2, "Operation", FontAwesomeIcons.tools, Colors.blueAccent),
+    Category(3, "Wages", FontAwesomeIcons.moneyBill, Colors.brown),
+    Category(4, "Fuel", FontAwesomeIcons.oilCan, Colors.cyanAccent),
+    Category(5, "Machinery", FontAwesomeIcons.toolbox, Colors.deepOrange),
+    Category(6, "Pet", FontAwesomeIcons.dog, Colors.deepPurpleAccent),
     Category(7, "Insurance", FontAwesomeIcons.hammer, Colors.indigo),
     Category(8, "Telephone", FontAwesomeIcons.phone, Colors.indigoAccent),
-    Category(9, "Health", FontAwesomeIcons.briefcaseMedical, Colors.lime),
-    Category(10, "Sport", FontAwesomeIcons.footballBall, Colors.limeAccent),
-    Category(11, "Beauty", FontAwesomeIcons.marker, Colors.pink),
-    Category(12, "Education", FontAwesomeIcons.book, Colors.teal),
-    Category(13, "Gift", FontAwesomeIcons.gift, Colors.redAccent),
-    Category(14, "Pet", FontAwesomeIcons.dog, Colors.deepPurpleAccent),
+    Category(9, "Advertisement", FontAwesomeIcons.microphone, Colors.lime),
+    Category(10, "labor", FontAwesomeIcons.watchmanMonitoring, Colors.limeAccent),
+    Category(11, "Tax", FontAwesomeIcons.moneyBillAlt, Colors.pink),
+    Category(12, "Land_Revenue", FontAwesomeIcons.landmark, Colors.teal),
+    Category(13, "Bonus", FontAwesomeIcons.gift, Colors.redAccent),
+    Category(14, "Miscellaneous", FontAwesomeIcons.cashRegister, Colors.deepOrangeAccent),
+
   };
   //* SECOND : INCOME LIST
   final incomeList = {
-    Category(0, "Salary", FontAwesomeIcons.wallet, Colors.green),
+    Category(0, "Milk_Sales", FontAwesomeIcons.wallet, Colors.green),
     Category(1, "Awards", FontAwesomeIcons.moneyCheck, Colors.amber),
     Category(2, "Grants", FontAwesomeIcons.gifts, Colors.lightGreen),
-    Category(3, "Rental", FontAwesomeIcons.houseUser, Colors.yellow),
+    Category(3, "Livestock_Sales", FontAwesomeIcons.truckPickup, Colors.yellow),
     Category(4, "Investment", FontAwesomeIcons.piggyBank, Colors.cyanAccent),
-    Category(5, "Lottery", FontAwesomeIcons.dice, Colors.deepOrange),
+    Category(5, "Other", FontAwesomeIcons.dice, Colors.deepOrange),
   };
 }

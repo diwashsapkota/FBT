@@ -14,7 +14,7 @@ class MoorDatabaseService {
 
   getIncomeSum(String month) async {
     List<int> list = await _database.transactionDao
-        .sumTheMoneyForMonth(month, "income")
+        .sumTheMoneyForMonth(month, "Income")
         .get();
 
     int sumOfIncome = 0;
@@ -35,7 +35,7 @@ class MoorDatabaseService {
 
   getExpenseSum(String month) async {
     List<int> list = await _database.transactionDao
-        .sumTheMoneyForMonth(month, "expense")
+        .sumTheMoneyForMonth(month, "Expense")
         .get();
 
     int sumOfExpense = 0;

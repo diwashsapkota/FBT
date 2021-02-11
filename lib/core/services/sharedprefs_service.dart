@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPrefrencesService {
+class SharedPreferencesService {
   final String hourKey = 'hour';
   final String minuteKey = 'minute';
 
