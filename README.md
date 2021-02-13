@@ -1,4 +1,4 @@
-<p><strong>Money manager: Expense Tracker app [Flutter]</strong></p>
+<p><strong>Farm Budget Tracker: Expenses and Income Tracker app [Flutter]</strong></p>
 <p><strong>&nbsp;</strong></p>
 <p>All of your expenses in one place, we help you track your financial activity efficiently</p>
 <p>&nbsp;</p>
@@ -11,15 +11,6 @@
 </ul>
 <p><strong>App Screenshots: </strong></p>
 
-![](screenshots/1.png)
-
-![](screenshots/2.png)
-
-![](screenshots/3.png)
-
-![](screenshots/4.png)
-
-![](screenshots/5.png)
 
 <p><strong>&nbsp;</strong></p>
 <p><strong>What I used: </strong></p>
@@ -39,5 +30,4 @@
 <li>Start your emulator</li>
 <li>Run the app &amp; enjoy</li>
 </ul>
-<p><strong>Contact me for work:&nbsp;</strong><a href="mailto:musabapps2019@gmail.com"><strong>musabapps2019@gmail.com</strong></a></p>
 <p>&nbsp;</p>
